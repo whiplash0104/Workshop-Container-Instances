@@ -47,7 +47,7 @@ Esquina superior derecha
 Profile > User Setting > Auth tokens > Generate Token
 El token debe ser copiado y almacenado, ya que no se puede borrar
 ```
-
+https://user-images.githubusercontent.com/assets/2dc9a168-f2c9-45b7-83e9-2590944e6a41.mov
 https://github.com/user-attachments/assets/2dc9a168-f2c9-45b7-83e9-2590944e6a41
 
 5. Conectar por ssh a la instancia 129.159.26.160, las credenciales serán entregadas en el laboratorio
