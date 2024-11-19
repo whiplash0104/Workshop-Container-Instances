@@ -80,9 +80,65 @@ Nombre VCN: vcn_usuario
 ```
 https://github.com/user-attachments/assets/7392fe58-7c60-40a3-8282-6900a0856a5e.mov
 
-8. 
-9.  
-10. asd
-11. a
-12. sd
-13. asd
+```
+Una vez creada la VCN configurar security list para subnet privada y pública, en ambos casos se debe crear regla de ingress
+Dentro de la subnet privada crear la siguiente regla:
+Security List > security list for private subnet-vcn-fbasso > Add Ingress Rules
+Copiar CIDR de subnet pública
+Source CIDR: 10.0.0.0/24
+IP Protocol: TCP
+Destination Port Range: 80
+
+Dentro de la red pública
+Security List > Default Security List for vcn-fbasso > Add Ingress Rules
+Source CIDR: 0.0.0.0/0
+IP Protocol: TCP
+Destination Port Range: 80
+```
+
+https://github.com/user-attachments/assets/2e60bb32-b2de-4fb3-8d8c-e4c3d00e0d5f
+
+8. Creación de Container Instance
+```
+Menú Principal > Developer Servicess > Container Instances > Create container instance
+Name: usuarioInstance
+Shape: Ampere
+OCPU: 1
+Memory: 2 Gb
+Networking: vcn-usuario
+Subnet: Private Subnet
+NEXT
+
+Container-1
+Name: containerUsuario
+Image: Selecionamos la creada
+Slecionamos la opción: Provide credentials manually
+Registry User: NAMESPACE/USUARIO
+Registry password: Token Creado Previamente
+NEXT
+
+Create Instance y esperamos a que se despliegue la instancia
+```
+<img width="818" alt="image" src="https://github.com/user-attachments/assets/67a7ec26-ad73-4164-8434-10abe2aa37ae">
+
+https://github.com/user-attachments/assets/1de7a6ec-8590-4f36-a85c-ffbaf0b583d4
+
+9. Configurar cloud shell para prueba de instancia
+```
+Developer Tool > cloud Shell
+Desde la cloud Shell en la opción "Network:" crear una conexión efimera que apunte a la red privada de la VCN creada
+```
+<img width="949" alt="image" src="https://github.com/user-attachments/assets/0ec837dc-ceb4-49b8-84ed-6ac3f8a9628e">
+
+https://github.com/user-attachments/assets/15d3ffb3-e2d2-4b44-b6ec-1e9d4746a91c
+
+10. Una vez configurada cloud shell probar la conexión 
+```
+Desde la información de la instancia copiar la ip privada, en este ejemplo es al 10.0.1.218 y desde la consola ejecutar
+$ curl 10.0.1.218:80
+```
+11.  
+12. asd
+13. a
+14. sd
+15. asd
