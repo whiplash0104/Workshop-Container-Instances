@@ -184,11 +184,18 @@ https://github.com/user-attachments/assets/c2ac36fb-bcaa-4143-a9c9-d8d6db52bd55
 
 12. Una vez creado el load balancer se debe configurar el backendset con la ip de la instancia
 ```
+Load Balancer > Backend sets > bs_lb_2024-XXX-XXX > Backends > Add backends
 
+Definir la opción IP addresses, pegar la ip de la instancia en IP address y Port 80
+Luego, click en Add
+
+esperar un poco y ver que el estado cambie a OK
 ```
+https://github.com/user-attachments/assets/8150cdde-9ead-4721-84cf-0f2ec1316671
 
-13. 
-14. asd
-15. a
-16. sd
-17. asd
+13. Finalmente y para validar que la instancia funcione como corresponde, validar la ip pública del balanceador y acceder desde el navegador web
+
+https://github.com/user-attachments/assets/28e05af2-95a9-4ebc-a342-ffa6a350ef5b
+
+<img width="506" alt="image" src="https://github.com/user-attachments/assets/824d0e4d-0de8-4da7-a737-b5982427b1e4">
+
