@@ -83,8 +83,7 @@ https://github.com/user-attachments/assets/7392fe58-7c60-40a3-8282-6900a0856a5e.
 Una vez creada la VCN configurar security list para subnet privada y pública, en ambos casos se debe crear regla de ingress
 Dentro de la subnet privada crear la siguiente regla:
 Security List > security list for private subnet-vcn-fbasso > Add Ingress Rules
-Copiar CIDR de subnet pública
-Source CIDR: 10.0.0.0/24
+Source CIDR: 0.0.0.0/0
 IP Protocol: TCP
 Destination Port Range: 80
 
@@ -135,7 +134,24 @@ https://github.com/user-attachments/assets/15d3ffb3-e2d2-4b44-b6ec-1e9d4746a91c
 ```
 Desde la información de la instancia copiar la ip privada, en este ejemplo es al 10.0.1.218 y desde la consola ejecutar
 $ curl 10.0.1.218:80
+Deberíamso tener un resultado similar a este:
+
+<html>
+  <head>
+    <title>Deploy Demo</title>
+    <style>
+      body {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Servicio 1 desde localhost!</h2>
+  </body>
+</html>
 ```
+https://github.com/user-attachments/assets/806e0380-911e-4603-a576-6d752259ff01
+
 11.  
 12. asd
 13. a
