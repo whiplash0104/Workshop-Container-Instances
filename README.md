@@ -152,8 +152,43 @@ Deberíamso tener un resultado similar a este:
 ```
 https://github.com/user-attachments/assets/806e0380-911e-4603-a576-6d752259ff01
 
-11.  
-12. asd
-13. a
-14. sd
-15. asd
+11. Para hacer pública la isntancia se debe crear un load balancer
+```
+Menú Principal > Networking > Load Balancers > Load Balancer > Create load balancer
+Definir:
+Nombre: lb_instanciaUsuario (en mi caso solo lb_instancia)
+Choose networking
+Virtual cloud network: vcn-USUARIO
+Subnet: pubic subnet-vcn-USUARIO
+Compartment: USUARIO
+NEXT
+
+En la segunda ventana no cambiar nada
+NEXT
+
+En la tercera ventana cambiar:
+Specify the type of traffic your listener handles: HTTP
+Specify the port your listener monitors for ingress traffic: 80
+NEXT
+
+En la cuarta ventana selecionar la opción Create a new log group
+Habilitar Access logs
+selecionar la opción: Create a new log group
+NEXT
+
+Submit
+
+Esperar un poco y validar la creación de load balancer
+```
+https://github.com/user-attachments/assets/c2ac36fb-bcaa-4143-a9c9-d8d6db52bd55
+
+12. Una vez creado el load balancer se debe configurar el backendset con la ip de la instancia
+```
+
+```
+
+13. 
+14. asd
+15. a
+16. sd
+17. asd
