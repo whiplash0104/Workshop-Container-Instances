@@ -78,9 +78,7 @@ https://github.com/user-attachments/assets/c4bc8823-1e63-4226-8f90-bb6dc94754ed
 Menú Principal > Networking Virtual Cloud Netowrks > Start VCN Wizard
 Nombre VCN: vcn_usuario
 ```
-
-https://github.com/user-attachments/assets/7392fe58-7c60-40a3-8282-6900a0856a5e
-
+https://github.com/user-attachments/assets/7392fe58-7c60-40a3-8282-6900a0856a5e.mov
 
 8. 
 9.  
