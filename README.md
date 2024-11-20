@@ -9,9 +9,6 @@
   - python36-oci-cli
   - podman - docker 
 
-### ¿Qué vamos a hacer?
-Todo el código está en https://github.com/whiplash0104/Workshop-Function
-
 
 ### Paso a Paso
 
